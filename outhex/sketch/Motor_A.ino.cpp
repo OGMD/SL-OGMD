@@ -1,5 +1,6 @@
 #include <Arduino.h>
 #line 1 "c:\\Users\\asus\\Desktop\\Arduino\\Motor_A\\Motor_A.ino"
+//OGMD Version code 1.0
 //Control de motor con push button
 
 int Btn_M1 = 2;
@@ -18,11 +19,6 @@ int val_ir_pin = 9;
 int val_ir=0;
 
 
-#line 19 "c:\\Users\\asus\\Desktop\\Arduino\\Motor_A\\Motor_A.ino"
-void setup();
-#line 41 "c:\\Users\\asus\\Desktop\\Arduino\\Motor_A\\Motor_A.ino"
-void loop();
-#line 19 "c:\\Users\\asus\\Desktop\\Arduino\\Motor_A\\Motor_A.ino"
 void setup()
 {
 

@@ -1,3 +1,4 @@
+//OGMD Version code 1.0
 //Control de motor con push button
 
 int Btn_M1 = 2;
