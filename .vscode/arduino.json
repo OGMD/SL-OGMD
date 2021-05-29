@@ -1,0 +1,6 @@
+{
+    "sketch": "Motor_A.ino",
+    "configuration": "cpu=atmega2560",
+    "board": "arduino:avr:mega",
+    "output": "C:/Users/asus/Desktop/Arduino/Motor_A/outhex"
+}
