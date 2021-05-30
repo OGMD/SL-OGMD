@@ -1,6 +1,6 @@
 //OGMD Version code 1.0
 //Control de motor con push button
-
+/*
 int Btn_M1 = 2;
 int Btn_Paro = 3;
 int Motor1 = 6;
@@ -9,8 +9,10 @@ int Led_M1 = 22;
 int Led_M2 = 23;
 int Led_Paro = 24;
 int time = 250;
-
+*/
 //variables sensor IR
+
+#include "Val_glob_loc/val_glob_loc.h"
 
 int led_ir = 8;
 int val_ir_pin = 9;
@@ -19,7 +21,7 @@ int val_ir=0;
 
 void setup()
 {
-
+/*
     //Entradas
 	pinMode(Btn_M1, INPUT);
     pinMode(Btn_Paro, INPUT);
@@ -31,9 +33,10 @@ void setup()
     pinMode(Led_M1, OUTPUT);
     pinMode(Led_M2, OUTPUT);
     pinMode(Led_Paro, OUTPUT);
-
+*/
 
     //pinmode sensor IR
+    set_V();
     pinMode(led_ir,OUTPUT);
     pinMode(val_ir_pin, INPUT);
     Serial.begin(9600);
