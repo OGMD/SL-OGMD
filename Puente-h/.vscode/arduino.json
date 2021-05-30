@@ -2,5 +2,5 @@
     "sketch": "PuenteH.ino",
     "configuration": "cpu=atmega2560",
     "board": "arduino:avr:mega",
-    "output": "C:/Users/asus/Desktop/Arduino/Puente-h/outhex"
+    "output": "C:/Users/asus/Desktop/Arduino/Motor_A/Puente-h/outhex"
 }

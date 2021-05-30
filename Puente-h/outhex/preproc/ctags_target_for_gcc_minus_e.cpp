@@ -1,4 +1,4 @@
-# 1 "c:\\Users\\asus\\Desktop\\Arduino\\Puente-h\\PuenteH.ino"
+# 1 "c:\\Users\\asus\\Desktop\\Arduino\\Motor_A\\Puente-h\\PuenteH.ino"
 //Puente-H control Arduino
 
 
@@ -27,103 +27,167 @@ void setup()
 
 
 }
-/*
 
 void adelante(){
 
-
-
-    digitalWrite(MotorAOut1, LOW);
-
-    digitalWrite(MotorAOut2, HIGH);
-
+    digitalWrite(MotorAOut1, 0x0);
+    digitalWrite(MotorAOut2, 0x1);
     analogWrite(VelMotorA, 255);
 
-   
 
-
-
-    digitalWrite(MotorBOut1, LOW);
-
-    digitalWrite(MotorBOut2, HIGH);
-
+    digitalWrite(MotorBOut1, 0x0);
+    digitalWrite(MotorBOut2, 0x1);
     analogWrite(VelMotorB, 255);
-
-  
 
 }
 
-
-
 void atras(){
 
-
-
-    digitalWrite(MotorAOut1, HIGH);
-
-    digitalWrite(MotorAOut2, LOW);
-
+    digitalWrite(MotorAOut1, 0x1);
+    digitalWrite(MotorAOut2, 0x0);
     analogWrite(VelMotorA, 255);
 
-
-
-    digitalWrite(MotorBOut1, HIGH);
-
-    digitalWrite(MotorBOut2, LOW);
-
+    digitalWrite(MotorBOut1, 0x1);
+    digitalWrite(MotorBOut2, 0x0);
     analogWrite(VelMotorB, 255);
 
-    
+}
 
-}*/
-# 55 "c:\\Users\\asus\\Desktop\\Arduino\\Puente-h\\PuenteH.ino"
+void stop(){
+
+    digitalWrite(MotorAOut1, 0x0);
+    digitalWrite(MotorAOut2, 0x0);
+    analogWrite(VelMotorA, 255);
+
+    digitalWrite(MotorBOut1, 0x0);
+    digitalWrite(MotorBOut2, 0x0);
+    analogWrite(VelMotorB, 255);
+
+}
+
+/*
+
 void loop()
+
 {
+
+
 
   int Btn_M = digitalRead(Btn);
 
 
+
+     
+
       Serial.println(Btn_M);
 
-    if(Btn_M == 0x0){
-        digitalWrite(MotorAOut1, 0x0);
-        digitalWrite(MotorAOut2, 0x1);
+
+
+    if(Btn_M == LOW){
+
+        digitalWrite(MotorAOut1, LOW);
+
+        digitalWrite(MotorAOut2, HIGH);
+
         analogWrite(VelMotorA, 255);
 
+    
 
-        digitalWrite(MotorBOut1, 0x0);
-        digitalWrite(MotorBOut2, 0x1);
+
+
+        digitalWrite(MotorBOut1, LOW);
+
+        digitalWrite(MotorBOut2, HIGH);
+
         analogWrite(VelMotorB, 255);
+
+
 
     }
 
-   else if(Btn_M == 0x1){
+
+
+   else if(Btn_M == HIGH){
+
+
 
         delay(100);
-        digitalWrite(MotorAOut1, 0x1);
-        digitalWrite(MotorAOut2, 0x0);
+
+        digitalWrite(MotorAOut1, HIGH);
+
+        digitalWrite(MotorAOut2, LOW);
+
         analogWrite(VelMotorA, 255);
 
-        digitalWrite(MotorBOut1, 0x1);
-        digitalWrite(MotorBOut2, 0x0);
+
+
+        digitalWrite(MotorBOut1, HIGH);
+
+        digitalWrite(MotorBOut2, LOW);
+
         analogWrite(VelMotorB, 255);
+
         Serial.println(Btn_M);
 
+    
+
     }
+
     else{
 
-        digitalWrite(MotorAOut1, 0x0);
-        digitalWrite(MotorAOut2, 0x0);
+
+
+        digitalWrite(MotorAOut1, LOW);
+
+        digitalWrite(MotorAOut2, LOW);
+
         analogWrite(VelMotorA, 0);
 
-        digitalWrite(MotorBOut1, 0x0);
-        digitalWrite(MotorBOut2, 0x0);
+
+
+        digitalWrite(MotorBOut1, LOW);
+
+        digitalWrite(MotorBOut2, LOW);
+
         analogWrite(VelMotorB, 0);
+
         Serial.println();
 
 
+
+    
+
     }
 
+    
 
+
+
+    
+
+}
+
+*/
+# 120 "c:\\Users\\asus\\Desktop\\Arduino\\Motor_A\\Puente-h\\PuenteH.ino"
+void loop(){
+
+    int Btn_M = digitalRead(Btn);
+
+
+      Serial.println(Btn_M);
+
+      if(Btn_M == 0x1){
+
+          adelante();
+          delay(time);
+      }
+      else if(Btn_M == 0x0){
+
+          atras();
+          delay(time);
+      }
+      else{
+          stop();
+      }
 
 }

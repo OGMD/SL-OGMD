@@ -19,6 +19,11 @@ int val_ir_pin = 9;
 int val_ir=0;
 
 
+#line 20 "c:\\Users\\asus\\Desktop\\Arduino\\Motor_A\\Motor_A.ino"
+void setup();
+#line 42 "c:\\Users\\asus\\Desktop\\Arduino\\Motor_A\\Motor_A.ino"
+void loop();
+#line 20 "c:\\Users\\asus\\Desktop\\Arduino\\Motor_A\\Motor_A.ino"
 void setup()
 {
 

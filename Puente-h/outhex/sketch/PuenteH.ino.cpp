@@ -1,5 +1,5 @@
 #include <Arduino.h>
-#line 1 "c:\\Users\\asus\\Desktop\\Arduino\\Puente-h\\PuenteH.ino"
+#line 1 "c:\\Users\\asus\\Desktop\\Arduino\\Motor_A\\Puente-h\\PuenteH.ino"
 //Puente-H control Arduino
 
 
@@ -14,11 +14,17 @@ int VelMotorB = 8;
 
 int Btn = 2;
 
-#line 15 "c:\\Users\\asus\\Desktop\\Arduino\\Puente-h\\PuenteH.ino"
+#line 15 "c:\\Users\\asus\\Desktop\\Arduino\\Motor_A\\Puente-h\\PuenteH.ino"
 void setup();
-#line 55 "c:\\Users\\asus\\Desktop\\Arduino\\Puente-h\\PuenteH.ino"
+#line 30 "c:\\Users\\asus\\Desktop\\Arduino\\Motor_A\\Puente-h\\PuenteH.ino"
+void adelante();
+#line 43 "c:\\Users\\asus\\Desktop\\Arduino\\Motor_A\\Puente-h\\PuenteH.ino"
+void atras();
+#line 55 "c:\\Users\\asus\\Desktop\\Arduino\\Motor_A\\Puente-h\\PuenteH.ino"
+void stop();
+#line 120 "c:\\Users\\asus\\Desktop\\Arduino\\Motor_A\\Puente-h\\PuenteH.ino"
 void loop();
-#line 15 "c:\\Users\\asus\\Desktop\\Arduino\\Puente-h\\PuenteH.ino"
+#line 15 "c:\\Users\\asus\\Desktop\\Arduino\\Motor_A\\Puente-h\\PuenteH.ino"
 void setup()
 {
     Serial.begin(9600);
@@ -33,7 +39,7 @@ void setup()
 
 
 }
-/*
+
 void adelante(){
 
     digitalWrite(MotorAOut1, LOW);
@@ -57,8 +63,21 @@ void atras(){
     digitalWrite(MotorBOut2, LOW);
     analogWrite(VelMotorB, 255);
     
-}*/
+}
 
+void stop(){
+
+    digitalWrite(MotorAOut1, LOW);
+    digitalWrite(MotorAOut2, LOW);
+    analogWrite(VelMotorA, 255);
+
+    digitalWrite(MotorBOut1, LOW);
+    digitalWrite(MotorBOut2, LOW);
+    analogWrite(VelMotorB, 255);
+
+}
+
+/*
 void loop()
 {
 
@@ -109,4 +128,27 @@ void loop()
 
     
 }
+*/
 
+void loop(){
+
+    int Btn_M = digitalRead(Btn);
+
+     
+      Serial.println(Btn_M);
+
+      if(Btn_M == HIGH){
+
+          adelante();
+          delay(time);
+      }
+      else if(Btn_M == LOW){
+
+          atras();
+          delay(time);
+      }
+      else{
+          stop();
+      }
+
+}

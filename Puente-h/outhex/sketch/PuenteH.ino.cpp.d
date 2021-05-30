@@ -1,5 +1,5 @@
-C:\Users\asus\Desktop\Arduino\Puente-h\outhex\sketch\PuenteH.ino.cpp.o: \
- C:\Users\asus\Desktop\Arduino\Puente-h\outhex\sketch\PuenteH.ino.cpp \
+C:\Users\asus\Desktop\Arduino\Motor_A\Puente-h\outhex\sketch\PuenteH.ino.cpp.o: \
+ C:\Users\asus\Desktop\Arduino\Motor_A\Puente-h\outhex\sketch\PuenteH.ino.cpp \
  C:\Program\ Files\ (x86)\Arduino\hardware\arduino\avr\cores\arduino/Arduino.h \
  C:\Program\ Files\ (x86)\Arduino\hardware\arduino\avr\cores\arduino/binary.h \
  C:\Program\ Files\ (x86)\Arduino\hardware\arduino\avr\cores\arduino/WCharacter.h \

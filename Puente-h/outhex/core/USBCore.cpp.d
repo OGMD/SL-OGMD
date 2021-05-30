@@ -1,4 +1,4 @@
-C:\Users\asus\Desktop\Arduino\Puente-h\outhex\core\USBCore.cpp.o: \
+C:\Users\asus\Desktop\Arduino\Motor_A\Puente-h\outhex\core\USBCore.cpp.o: \
  C:\Program\ Files\ (x86)\Arduino\hardware\arduino\avr\cores\arduino\USBCore.cpp \
  C:\Program\ Files\ (x86)\Arduino\hardware\arduino\avr\cores\arduino\USBAPI.h \
  C:\Program\ Files\ (x86)\Arduino\hardware\arduino\avr\cores\arduino\Arduino.h \

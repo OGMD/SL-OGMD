@@ -26,7 +26,7 @@ void setup()
 
 
 }
-/*
+
 void adelante(){
 
     digitalWrite(MotorAOut1, LOW);
@@ -50,8 +50,21 @@ void atras(){
     digitalWrite(MotorBOut2, LOW);
     analogWrite(VelMotorB, 255);
     
-}*/
+}
 
+void stop(){
+
+    digitalWrite(MotorAOut1, LOW);
+    digitalWrite(MotorAOut2, LOW);
+    analogWrite(VelMotorA, 255);
+
+    digitalWrite(MotorBOut1, LOW);
+    digitalWrite(MotorBOut2, LOW);
+    analogWrite(VelMotorB, 255);
+
+}
+
+/*
 void loop()
 {
 
@@ -101,4 +114,28 @@ void loop()
     
 
     
+}
+*/
+
+void loop(){
+
+    int Btn_M = digitalRead(Btn);
+
+     
+      Serial.println(Btn_M);
+
+      if(Btn_M == HIGH){
+
+          adelante();
+          delay(time);
+      }
+      else if(Btn_M == LOW){
+
+          atras();
+          delay(time);
+      }
+      else{
+          stop();
+      }
+
 }

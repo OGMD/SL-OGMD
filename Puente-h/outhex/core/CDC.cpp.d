@@ -1,4 +1,4 @@
-C:\Users\asus\Desktop\Arduino\Puente-h\outhex\core\CDC.cpp.o: \
+C:\Users\asus\Desktop\Arduino\Motor_A\Puente-h\outhex\core\CDC.cpp.o: \
  C:\Program\ Files\ (x86)\Arduino\hardware\arduino\avr\cores\arduino\CDC.cpp \
  C:\Program\ Files\ (x86)\Arduino\hardware\arduino\avr\cores\arduino\USBAPI.h \
  C:\Program\ Files\ (x86)\Arduino\hardware\arduino\avr\cores\arduino\Arduino.h \
